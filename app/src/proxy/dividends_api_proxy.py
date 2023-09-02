@@ -4,6 +4,7 @@ from datetime import datetime
 
 
 def get_aggregated_dividends(apiKey: str, startDate: datetime, endDate: datetime, ticker: str) -> float:
+    print("--- proxy get_aggregated_dividends ---")
     api_response = freedom_finance_api_service.get_dividends(apiKey, ticker)
 
     if api_response.status_code != 200:

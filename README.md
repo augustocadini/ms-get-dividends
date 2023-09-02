@@ -13,3 +13,10 @@ Structure
 - API 1 (https://rapidapi.com/integraatio/api/freedom-finance/)
 - API 2
 - API N
+
+
+Next Steps:
+
+1. Create endpoint to check the quota?
+2. Write the article contents so far;
+3. Deploy Cloud Run; 

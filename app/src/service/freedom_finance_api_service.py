@@ -6,6 +6,7 @@ rapid_api_host = "freedom-finance.p.rapidapi.com"
 
 
 def get_dividends(apiKey: str, ticker: str) -> Response:
+    print("--- service get_dividends")
     try:
         query_string = {"Symbol": f"{ticker}", "OrderBy": "Ascending"}
         headers = {

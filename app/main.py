@@ -20,7 +20,7 @@ def health_check():
     return jsonify({'status': 'ok'})
 
 
-@app.route('/v1/stock/dividends', methods=['GET'])
+@app.route('/v1/stock/dividends', methods=['POST'])
 def v1_get_dividends():
     print('V1 Get Dividends')
     api_key = request.headers.get('X-API-Key')

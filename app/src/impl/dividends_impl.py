@@ -6,6 +6,7 @@ from ..proxy.dividends_api_proxy import get_aggregated_dividends
 
 
 def read_dividends(apiKey: str, request: DividendsGetRequest) -> DividendsGetResponse:
+    print("--- impl read dividends ---")
     start_date = datetime.fromisoformat(request.startDate)
     end_date = datetime.fromisoformat(request.endDate)
     _validate_dates(start_date, end_date)
@@ -20,5 +21,5 @@ def read_dividends(apiKey: str, request: DividendsGetRequest) -> DividendsGetRes
 
 def _validate_dates(startDate, endDate):
     if startDate > endDate:
-        abort(400, 'The end date is bigger than the start date.')
+        abort(400, 'The end date is greater than the start date.')
 
