@@ -1,6 +1,17 @@
+## Summary
 This application has been written for educational purposes to study the Python API implementation and its deployment on the Google Cloud Platform **Cloud Run** service. This Microservice (ms) should retrieve the Dividends from Third-Party APIs by exposing some endpoints.
 
 Currently, the application is using [Freedom Finance](https://rapidapi.com/integraatio/api/freedom-finance) as Third-Party API to get the Financial Data as the Stock's dividends. To use the API, is needed to obtain the API Key provided by the API Page hosted in RapidAPI Hub. It's pretty easy to do from the [link provided here](https://rapidapi.com/integraatio/api/freedom-finance/pricing).
+
+## Running
+1. Active Python venv: `/venv-ms-get-dividends/bin % source ./activate`
+
+2. Install the libraries: `/ms-get-dividends % pip install --no-cache-dir -r requirements.txt`
+
+3. Run the service: `/ms-get-dividends/app % python main.py`
+
+## Deploy to Cloud Run
+1. `/ms-get-dividends % gcloud run deploy total-return-dev --region=us-central1 --source=.`
 
 ## Endpoints
 - `@GET /v1/stock/dividends`
@@ -57,8 +68,8 @@ Example:
 {"status":"ok"}
 ```
 
-Architecture
-- Resource: endpoints declaration.
-- Resource Implementation: endpoints logic implementation.
-- Service Proxy: service API routes. It makes it easier to decouple the third-party API in case need to change it.
-- Service: downstream service call implementation.
+## Architecture
+- **Resource**: endpoints declaration.
+- **Resource Implementation**: endpoints logic implementation.
+- **Service Proxy**: service API routes. It makes it easier to decouple the third-party API in case need to change it.
+- **Service**: downstream service call implementation.
