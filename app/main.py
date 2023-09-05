@@ -24,6 +24,7 @@ def health_check():
 def v1_get_dividends():
     print('V1 Get Dividends')
     api_key = request.headers.get('X-API-Key')
+    print(f"Payload: {json.dumps(request.json)}")
     dividend_request = DividendsGetRequest(**request.json)
     result = read_dividends(api_key, dividend_request)
     return jsonify(result)

@@ -13,6 +13,8 @@ def get_dividends(apiKey: str, ticker: str) -> Response:
             "X-RapidAPI-Key": f"{apiKey}",
             "X-RapidAPI-Host": f"{rapid_api_host}"
         }
+        print(f"QueryString: {query_string}")
+        print(f"Headers: {headers}")
         response = requests.get(url_dividends, headers=headers, params=query_string)
         return response
     except Exception as e:
