@@ -3,7 +3,7 @@ This application has been written for educational purposes to study the Python A
 
 Currently, the application is using [Freedom Finance](https://rapidapi.com/integraatio/api/freedom-finance) as Third-Party API to get the Financial Data as the Stock's dividends. To use the API, is needed to obtain the API Key provided by the API Page hosted in RapidAPI Hub. It's pretty easy to do from the [link provided here](https://rapidapi.com/integraatio/api/freedom-finance/pricing).
 
-The code implementation has been described here -> https://medium.com/@Tutonews/getting-started-a-cloud-run-python-application-4f8a54b4d951
+The code implementation has been documented here -> [https://medium.com/@Tutonews/getting-started-a-cloud-run-python-application-4f8a54b4d951](https://medium.com/@augustocadini/getting-started-a-cloud-run-python-application-4f8a54b4d951)
 
 ## Running
 1. Active Python venv: `/venv-ms-get-dividends/bin % source ./activate`
