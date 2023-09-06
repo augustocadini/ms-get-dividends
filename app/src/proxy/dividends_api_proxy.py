@@ -11,7 +11,9 @@ def get_aggregated_dividends(apiKey: str, startDate: datetime, endDate: datetime
         if 'responseStatus' in api_response.json().keys():
             abort(api_response.status_code, api_response.json())
         else:
-            abort(500, f"An error occurred while trying to get dividends for ticker {ticker}. Error: {api_response}")
+            print(f"{api_response.content}")
+            abort(500, f"An error occurred while trying to get dividends for ticker {ticker}. Error Code: {api_response}, "
+                       f"Error Message: {api_response.content}")
 
     results = api_response.json()['results']
 
