@@ -3,8 +3,8 @@ import json
 
 from flask import Flask, jsonify, request
 
-from app.src.model.dividends_get_request import DividendsGetRequest
-from app.src.impl.dividends_impl import read_dividends
+from src.model.dividends_get_request import DividendsGetRequest
+from src.impl.dividends_impl import read_dividends
 from werkzeug.exceptions import HTTPException
 
 # Init Flask

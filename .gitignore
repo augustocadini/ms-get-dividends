@@ -3,3 +3,5 @@ app/src/__pycache__/
 app/src/model/__pycache__/
 app/src/service/__pycache__/
 .idea/
+src/impl/__pycache__/
+src/proxy/__pycache__/
